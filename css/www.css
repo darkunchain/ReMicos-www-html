@@ -1,0 +1,134 @@
+header {    
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */       
+    position: relative;    
+    background-color: rgb(236, 236, 236);
+    background-repeat: no-repeat;    
+    background-position: center;    
+    text-align: center;
+    
+    
+  }
+  .header-content {
+    z-index: 1;
+  }
+
+  .logo-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente la imagen dentro del contenedor */
+    align-items: center;     /* Centra verticalmente la imagen dentro del contenedor */    
+    position: absolute;
+    top: 0;                 /* Fija el logo en la parte superior */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .logo-container img {
+    width: 40vw;           /* La anchura del logo será el 20% del viewport */
+    max-width: 300px;      /* Tamaño máximo del logo */
+    max-height: 40vh;          /* Mantiene la proporción de la imagen */
+  }
+
+  .header-logo {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente la imagen dentro del contenedor */
+    align-items: center;     /* Centra verticalmente la imagen dentro del contenedor */    
+    position: relative;    
+    z-index: 0;
+    width: 100%;
+    height: auto;
+    padding-top: 6vh;
+  }
+  .header-logo img {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */    
+    position: relative;
+    height: auto;
+    width: 95%;
+  }
+  
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido del nav */
+    align-items: center;     /* Centra verticalmente el contenido del nav */
+  } 
+  
+  .card-container {
+    position: absolute;
+    bottom: -30%; /* Ajusta este valor para posicionar las tarjetas correctamente */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 2;
+  }
+  
+  .card {
+    margin: 0 10px;
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+
+
+/************ @media estilos para pantallas menores a 767px ************/
+
+  @media (max-width: 767px) {
+    .card-container {
+        position: absolute;
+        bottom: -30%; /* Ajusta este valor para posicionar las tarjetas correctamente */
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        z-index: 2;
+      }      
+      .card {
+        margin: 0 10px;
+        transition: transform 0.3s;
+      }      
+      .card:hover {
+        transform: translateY(-10px);
+      }
+  }
+
+/************ @media estilos para pantallas desde 768px hasta 1024px ************/
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .card-container {
+        position: absolute;
+        bottom: -10%; /* Ajusta este valor para posicionar las tarjetas correctamente */
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        z-index: 2;
+      }      
+      .card {
+        margin: 0 30px;
+        transition: transform 0.3s;
+      }      
+      .card:hover {
+        transform: translateY(-10px);
+      }
+  }
+/************ @media estilos para pantallas desde 1024px y superior ************/
+  @media (min-width: 1025px) {
+    .card-container {
+        position: absolute;
+        bottom: -5%; /* Ajusta este valor para posicionar las tarjetas correctamente */
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        z-index: 2;
+      }      
+      .card {
+        margin: 0 80px;
+        transition: transform 0.3s;
+      }      
+      .card:hover {
+        transform: translateY(-10px);
+      }
+  }
